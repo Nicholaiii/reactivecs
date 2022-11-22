@@ -1,6 +1,6 @@
 {
   "name": "reactivecs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A rxjs wrapper for bitecs",
   "license": "MIT",
   "main": "dist/index.js",
