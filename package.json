@@ -4,6 +4,7 @@
   "description": "A rxjs wrapper for bitecs",
   "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "tsc",
     "build": "tsc",
