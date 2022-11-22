@@ -67,21 +67,8 @@
     "plugins": {
       "@release-it/conventional-changelog": {
         "infile": "CHANGELOG.md",
-        "preset": {
-          "name": "conventionalcommits",
-          "header": "# Changelog",
-          "types": [
-            {
-              "type": "feat",
-              "section": "Features"
-            },
-            {
-              "type": "fix",
-              "section": "Bug Fixes"
-            },
-            {}
-          ]
-        }
+        "header": "# Changelog",
+        "preset": "conventionalcommits"
       }
     }
   }
