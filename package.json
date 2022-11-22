@@ -7,6 +7,7 @@
   "scripts": {
     "prepare": "tsc",
     "build": "tsc",
+    "lint": "ts-standard --fix",
     "start": "tsx watch src/index.ts",
     "test": "jest",
     "release": "release-it"
@@ -17,6 +18,7 @@
     "url": "https://nicholai.dev"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^5.1.1",
     "@types/jest": "^29.2.3",
     "@types/node": "^18.11.9",
     "bitecs": "^0.3.38",
@@ -53,6 +55,34 @@
     },
     "git": {
       "commitMessage": "chore: release v${version}"
+    },
+    "hooks": {
+      "before:init": [
+        "npm run lint",
+        "npm test"
+      ],
+      "after:bump": "npm run build",
+      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "header": "# Changelog",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {}
+          ]
+        }
+      }
     }
   }
 }
