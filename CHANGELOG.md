@@ -1,5 +1,7 @@
 
 
+### [0.2.1](https://github.com/Nicholaiii/reactivecs/compare/0.2.0...0.2.1) (2022-11-22)
+
 ## 0.2.0 (2022-11-22)
 
 
